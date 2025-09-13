@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Comic Neue', cursive;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #ffc1cc;
+      position: relative;
+      overflow: hidden;
+
+      /* Tiny hearts background pattern */
+      background-image: 
+        radial-gradient(#ff66b3 2px, transparent 2px),
+        radial-gradient(#ff66b3 2px, transparent 2px);
+      background-position: 0 0, 15px 15px;
+      background-size: 30px 30px;
+    }
+
+    /* Big heart in the background */
+    body::before {
+      content: "❤";
+      font-size: 300px;
+      color: rgba(255, 255, 255, 0.2);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-15deg);
+      z-index: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 300px;
+      position: relative;
+      z-index: 1;
+      border: 6px solid #FFD700;
+      border-style: double;
+    }
+
+    h2 { color: #ff4d94; margin-bottom: 20px; }
+
+    input[type="email"] {
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ffb6c1;
+      width: 90%;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 15px;
+      background-color: #ff4d94;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    button:hover {
+      background-color: #ff66b3;
+      color: transparent;
+    }
+
+    button:hover::after {
+      content: "I love you 💌";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: bold;
+    }
+
+    a { text-decoration: none; color: #ff4d94; font-weight: bold; }
+    p { margin-top: 15px; font-size: 0.9em; }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Register 💖</h2>
+    <form method="POST">
+      <input type="email" name="email" placeholder="Your email" required><br>
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="/">Login here ✨</a></p>
+  </div>
+</body>
+</html>
