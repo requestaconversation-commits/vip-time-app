@@ -73,8 +73,8 @@ def logout():
     return redirect(url_for("login"))
 
 # --- Email Sending (Gmail) ---
-SENDER_EMAIL = "cheemaabdullah591@gmail.com"
-SENDER_APP_PASSWORD = "duxz eeer rcji kddq"  # Gmail App Password
+SENDER_EMAIL = "requestaconversation@gmail.com"
+SENDER_APP_PASSWORD = "zpmn kltg ncxt kzkj"  # Gmail App Password
 
 def send_email_to_all(date, time, extra="No", extra_text=""):
     conn = sqlite3.connect(DB_PATH)
