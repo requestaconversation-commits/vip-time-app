@@ -11,7 +11,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-color: #ffc1cc; /* soft pink background */
+      background-color: #ffc1cc;
       position: relative;
       overflow: hidden;
 
@@ -25,37 +25,47 @@
 
     .container {
       background: white;
-      padding: 30px;
+      padding: 40px 25px;
       border-radius: 20px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
       text-align: center;
-      width: 300px;
-      position: relative;
-      z-index: 1;
-      border: 6px solid #FFD700; /* comicy golden border */
-      border-style: double;
+      width: 90%;
+      max-width: 350px; /* a bit bigger than original, but not huge */
+      border: 6px double #FFD700;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
-    h2 { color: #ff4d94; margin-bottom: 20px; }
+    h2 {
+      color: #ff4d94;
+      margin-bottom: 25px;
+      font-size: 2rem; /* slightly bigger than desktop */
+    }
 
     input[type="email"] {
-      padding: 10px;
+      padding: 12px;
       border-radius: 10px;
       border: 1px solid #ffb6c1;
-      width: 90%;
-      margin-bottom: 15px;
+      width: 95%;
+      margin-bottom: 18px;
+      font-size: 1.1rem;
     }
 
     button {
-      padding: 10px 20px;
+      padding: 12px 0;
       border: none;
       border-radius: 15px;
       background-color: #ff4d94;
       color: white;
       font-weight: bold;
+      font-size: 1.1rem;
       cursor: pointer;
       transition: all 0.3s ease;
       position: relative;
+      width: 65%;
+      max-width: 200px;
     }
 
     button:hover {
@@ -71,18 +81,29 @@
       transform: translate(-50%, -50%);
       color: white;
       font-weight: bold;
+      font-size: 1.1rem;
     }
 
     a { text-decoration: none; color: #ff4d94; font-weight: bold; }
-    p { margin-top: 15px; font-size: 0.9em; }
+    p { margin-top: 18px; font-size: 0.95rem; }
 
+    /* Mobile tweaks */
+    @media (max-width: 480px) {
+      .container {
+        padding: 30px 20px;
+        max-width: 90%;
+      }
+      h2 { font-size: 2.2rem; }
+      input[type="email"], button { font-size: 1.1rem; padding: 10px; }
+      p, a { font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h2>Login 💖</h2>
-    <form method="POST">
-      <input type="email" name="email" placeholder="Your email" required><br>
+    <form method="POST" style="width:100%; display:flex; flex-direction:column; align-items:center;">
+      <input type="email" name="email" placeholder="Your email" required>
       <button type="submit">Login</button>
     </form>
     <p>Don't have an account? <a href="/register">Register here ✨</a></p>
