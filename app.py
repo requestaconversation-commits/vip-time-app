@@ -95,7 +95,7 @@ def send_email_to_all(date, time, extra="No", extra_text=""):
     body = f"""
 Hey you 😏
 
-Your VIP time slot has been booked! I promise to behave… maybe 😜
+This slot has been booked for laughs and tea! 😜
 
 📅 Date: {date}
 ⏰ Time: {formatted_time}
